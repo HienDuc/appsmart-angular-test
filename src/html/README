@@ -1,0 +1,6 @@
+Set up:
+1. Install bower
+'npm install bower'
+2. Install library
+'bower install'
+3. Use a web serve to link to /html/ folder to start the app.
