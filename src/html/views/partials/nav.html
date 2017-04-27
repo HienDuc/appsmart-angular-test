@@ -1,0 +1,15 @@
+<div id="sidebar-wrap" ng-controller="NavCtrl">
+
+  <uib-accordion slimscroll="{height: '100%'}">
+    <uib-accordion-group is-open="status.isFirstOpen" ng-class="{'open': status.isFirstOpen, 'closed': !status.isFirstOpen}">
+      <uib-accordion-heading>
+        Music App <i class="fa" ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}"></i>
+      </uib-accordion-heading>
+      <ul id="navigation" nav-collapse ripple>
+        <li ui-sref-active="active"><a ui-sref="app.albums.list"><i class="fa fa-music"></i> <span>Music App</span></a></li>
+      </ul>
+    </uib-accordion-group>
+
+  </uib-accordion>
+
+</div>

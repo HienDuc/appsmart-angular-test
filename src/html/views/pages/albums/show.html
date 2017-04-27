@@ -1,0 +1,70 @@
+<div class="page page-albums" ng-controller="ShowAlbumCtrl">
+
+  <div class="pageheader">
+
+    <h2>{{album.value.title}}</h2>
+
+    <div class="page-bar">
+
+      <ul class="page-breadcrumb">
+        <li>
+          <a ui-sref="app.dashboard"><i class="fa fa-home"></i> {{main.title}}</a>
+        </li>
+        <li>
+          <a ui-sref="app.albums.list">Manage Album</a>
+        </li>
+        <li>
+          <a ui-sref="app.albums.show({ id: album.value.id })">{{album.value.title}}</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- row -->
+  <div class="row">
+
+
+    <div class="col-md-12">
+
+      <!-- tile -->
+      <section class="tile tile-simple">
+
+
+        <!-- tile body -->
+        <div class="tile-body">
+
+
+          <ul class="list-unstyled m-20">
+            <li ng-if="album.value.title"><strong>{{'album.value.title' | translate}}:</strong></li>
+            <li ng-if="album.value.artist"><a>{{album.value.artist}}</a></li>
+            <li><strong>Country:</strong></li>
+            <li><a>{{album.value.country}}</a></li>
+            <li><strong>Company:</strong></li>
+            <li><a>{{album.value.company}}</a></li>
+            <li><strong>Price:</strong></li>
+            <li><a>{{album.value.price}}</a></li>
+            <li><strong>Year</strong></li>
+            <li><a>{{album.value.year}}</a></li>
+          </ul>
+
+          <div class="form-footer">
+            <button class="btn btn-lightred btn-ef btn-ef-4 btn-ef-4c" ui-sref="app.albums.list"><i class="fa fa-arrow-left"></i>{{'Menu.Back' | translate}}</button>
+          </div>
+
+        </div>
+        <!-- /tile body -->
+
+
+      </section>
+      <!-- /tile -->
+
+    </div>
+
+  </div>
+  <!-- /row -->
+
+</div>
+
+

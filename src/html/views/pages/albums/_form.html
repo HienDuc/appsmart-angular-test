@@ -1,0 +1,61 @@
+<form name="form" class="form-horizontal form-validation" role="form" novalidate>
+  <div class="form-group mt-20">
+    <label for="avatar" class="col-sm-3 control-label">Album Thumbnail</label>
+    <div class="col-sm-9">
+      <img ngf-thumbnail="album.logoUrl" alt="" class="mb-10" style="width: 80px; height: 80px">
+      <button class="btn-nostyle text-danger ml-5"><i class="fa fa-times"></i>
+      </button>
+      <input ngf-drop ngf-select ngf-drag-over-class="dragover" ngf-multiple="true" accept="image/*" type="file" ng-model="file" name="avatar" id="avatar" base-sixty-four-input onload="onLoad9">
+      <uib-progressbar class="progress-xxs mt-10" value="album.logoUrl.progress" type="cyan" ng-show="album.logoUrl.progress >= 0"></uib-progressbar>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Title" class="col-sm-3 control-label">Title</label>
+    <div class="col-sm-9">
+      <input type="text" name="Title" class="form-control" id="Title" placeholder="Title" ng-model="album.title">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="artist" class="col-sm-3 control-label">Artist</label>
+    <div class="col-sm-9">
+      <input type="text" name="artist" class="form-control" id="artist" placeholder="Artist" ng-model="album.artist">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="company" class="col-sm-3 control-label">Company</label>
+    <div class="col-sm-9">
+      <input type="text" name="company" class="form-control" id="company" placeholder="Company..." ng-model="album.company">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="country" class="col-sm-3 control-label">Country</label>
+    <div class="col-sm-9">
+      <input type="text" name="country" class="form-control" id="country" placeholder="Country" ng-model="album.country">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="year" class="col-sm-3 control-label">Year</label>
+    <div class="col-sm-9">
+      <input type="text" name="year" class="form-control" id="year" placeholder="Price" ng-model="album.year">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="price" class="col-sm-3 control-label">Price</label>
+    <div class="col-sm-9">
+      <input type="text" name="price" class="form-control" id="price" placeholder="Price" ng-model="album.price">
+    </div>
+  </div>
+  <div class="form-footer">
+    <button class="btn btn-success b-0 pull-right" ng-click="ok()" ng-disabled="form.$invalid">{{'Menu.Submit' | translate}}
+      <img ng-if="loading" src="images/spin.svg" />
+    </button>
+    <button class="btn btn-lightred btn-ef btn-ef-4 btn-ef-4c" ui-sref="app.albums.list"><i class="fa fa-arrow-left"></i>{{'Menu.Cancel' | translate}}</button>
+  </div>
+</form>
+<canvas id="canvas0" style="display: none !important;"></canvas>
+<canvas id="canvas1" style="display: none !important;"></canvas>
+<canvas id="canvas2" style="display: none !important;"></canvas>
+<canvas id="canvas3" style="display: none !important;"></canvas>
+<canvas id="canvas4" style="display: none !important;"></canvas>
+<canvas id="canvas5" style="display: none !important;"></canvas>
+<canvas id="canvas9" style="display: none !important;"></canvas>
